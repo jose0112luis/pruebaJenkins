@@ -3,11 +3,13 @@
 def jsonParse(def json) {
     new groovy.json.JsonSlurperClassic().parseText(json)
 }*/
+
 pipeline {
-  agent { label 'master' }
+  agent any //{ label 'master' }
   environment {
     appName = "variable" 
   }
+    
   stages {
 
     stage("paso 1"){
